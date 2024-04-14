@@ -7,7 +7,7 @@ struct node {
   struct node *next;
 };
 
-// Function to create a new node
+// (1) Function to create a new node
 struct node* createNode(int dat) {
   struct node *newNode = (struct node *)malloc(sizeof(struct node));
   newNode->data = dat;
@@ -16,7 +16,7 @@ struct node* createNode(int dat) {
   return newNode;
 }
 
-// Function to insert a node at the beginning of the doubly linked list
+// (2) Function to insert a node at the beginning of the doubly linked list
 void insertAtBeginning(struct node **head, int dat) {
   struct node *newNode = createNode(dat);
   if (*head == NULL) {
@@ -28,7 +28,7 @@ void insertAtBeginning(struct node **head, int dat) {
   }
 }
 
-// Function to insert a node at the end of the doubly linked list
+// (3) Function to insert a node at the end of the doubly linked list
 void insertAtEnd(struct node **head, int dat) {
   struct node *newNode = createNode(dat);
   if (*head == NULL) {
@@ -43,7 +43,7 @@ void insertAtEnd(struct node **head, int dat) {
   }
 }
 
-// Function to insert a node after a specific node in the doubly linked list
+// (4) Function to insert a node after a specific node in the doubly linked list
 void insertAfterNode(struct node *prevNode, int dat) {
   if (prevNode == NULL) {
     printf("Previous node cannot be NULL.\n");
@@ -58,7 +58,7 @@ void insertAfterNode(struct node *prevNode, int dat) {
   newNode->prev = prevNode;
 }
 
-// Function to delete the first node of the doubly linked list
+// (5) Function to delete the first node of the doubly linked list
 void deleteFirstNode(struct node **head) {
   if (*head == NULL) {
     printf("List is empty. Nothing to delete.\n");
@@ -72,7 +72,7 @@ void deleteFirstNode(struct node **head) {
   free(temp);
 }
 
-// Function to delete the last node of the doubly linked list
+// (6) Function to delete the last node of the doubly linked list
 void deleteLastNode(struct node **head) {
   if (*head == NULL) {
     printf("List is empty. Nothing to delete.\n");
@@ -90,7 +90,7 @@ void deleteLastNode(struct node **head) {
   free(temp);
 }
 
-// Function to delete a specific node from the doubly linked list
+// (7) Function to delete a specific node from the doubly linked list
 void deleteNode(struct node **head, struct node *delNode) {
   if (*head == NULL || delNode == NULL) {
     printf("List is empty or the node to be deleted is NULL.\n");
@@ -108,7 +108,7 @@ void deleteNode(struct node **head, struct node *delNode) {
   free(delNode);
 }
 
-// Function to display the elements of the doubly linked list
+// (8) Function to display the elements of the doubly linked list
 void display(struct node *head) {
   struct node *temp = head;
   while (temp != NULL) {
@@ -121,39 +121,39 @@ void display(struct node *head) {
 int main() {
   struct node *head = NULL;
 
-  // Inserting elements at the beginning of the doubly linked list
+  
   insertAtBeginning(&head, 10);
   insertAtBeginning(&head, 20);
   insertAtBeginning(&head, 30);
 
-  // Displaying the doubly linked list
+  
   printf("Doubly Linked List: ");
   display(head);
 
-  // Inserting elements at the end of the doubly linked list
+  
   insertAtEnd(&head, 40);
   insertAtEnd(&head, 50);
 
-  // Displaying the doubly linked list
+  
   printf("Doubly Linked List after insertion at end: ");
   display(head);
 
-  // Inserting element after a specific node
+  
   insertAfterNode(head->next, 25);
   printf("Doubly Linked List after insertion after a specific node: ");
   display(head);
 
-  // Deleting the first node
+  
   deleteFirstNode(&head);
   printf("Doubly Linked List after deleting the first node: ");
   display(head);
 
-  // Deleting the last node
+
   deleteLastNode(&head);
   printf("Doubly Linked List after deleting the last node: ");
   display(head);
 
-  // Deleting a specific node
+  
   deleteNode(&head, head->next);
   printf("Doubly Linked List after deleting a specific node: ");
   display(head);
