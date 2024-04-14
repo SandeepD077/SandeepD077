@@ -1,0 +1,128 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+struct node {
+    int coef;
+    int pow;
+    struct node * link;
+};
+struct node*first=NULL;
+struct node*second=NULL;
+struct node*third=NULL;
+
+void create(struct node **first, int coeff,int poww ) {
+  struct node *ptr, *ctr;
+  ctr = *first;
+  ptr = (struct node *)malloc(sizeof(struct node));
+  ptr->coef = coeff;
+  ptr -> pow = poww;
+  ptr->link = NULL;
+  if (*first == NULL) {
+    *first = ptr;
+  }
+  else {
+    while (ctr->link != NULL) {
+      ctr = ctr->link;
+    }
+    ctr->link = ptr;
+    
+  }
+}
+int solve(struct node ** first,int dat){
+    struct node * ptr;
+    ptr = *first;
+    int a;
+    while(ptr != NULL){
+        a=a+(ptr->coef*pow(dat,ptr->pow));
+        ptr = ptr -> link;
+        
+    }
+    return a;
+}
+void polynomialadd(struct node**first,struct node **second, struct node **tr){
+  struct node*ptr ,*ktr,*jtr;
+  
+  ktr  = *first;
+  jtr = *second;
+  ptr= *tr;
+  
+  
+  while(ktr!=NULL&& jtr!= NULL){
+
+    if(ktr->pow>jtr->pow){
+      ptr->coef = ktr->coef;
+      ptr->pow = ktr->pow;
+      ktr = ktr->link;
+    }
+    else if(ktr->pow<jtr->pow){
+      ptr->coef = jtr->coef;
+      ptr->pow = jtr->pow;
+      jtr = jtr->link;
+    }
+    else{
+      ptr->pow = jtr->pow;
+      ptr -> coef= jtr->coef+ktr->coef;
+      jtr = jtr -> link;
+      ktr = ktr-> link;
+    }
+        ptr -> link =  (struct node *)malloc(sizeof(struct node));
+    ptr = ptr-> link;
+    ptr->link = NULL;
+    
+    
+  }
+   while(ktr!=NULL||jtr != NULL){
+    if(ktr!=NULL){
+      ptr->coef = ktr->coef;
+      ptr->pow = ktr->pow;
+      ktr = ktr->link;
+    }
+    else{
+      ptr->coef = jtr->coef;
+      ptr->pow = jtr->pow;
+      jtr = jtr->link;
+    }
+    ptr -> link =  (struct node *)malloc(sizeof(struct node));
+    ptr = ptr-> link;
+    ptr->link = NULL;
+   
+   }
+}
+void display(struct node ** third){
+  struct node * ptr ;
+  ptr = *third;
+  while(ptr!=NULL){
+    printf("\t%d * X^%d\t",ptr->coef,ptr->pow);
+    
+    ptr = ptr->link;
+  }
+  printf("\n");
+}
+void display23(struct node ** third){
+  struct node * ptr ;
+  ptr = *third;
+  while(ptr->link!=NULL){
+    printf("       %d * X^%d\t",ptr->coef,ptr->pow);
+    
+    ptr = ptr->link;
+  }
+  printf("\n");
+}
+
+int main() {
+    create(&first,7,2);
+    create(&first,2,1);
+    create(&first,8,0);
+    create(&second,8,2);
+    create(&second,9,1);
+    create(&second,1,0);
+    create(&third,0,0);
+    
+display(&first);
+display(&second);
+polynomialadd(&first,&second,&third);
+display23(&third);
+printf("\n if we put x = 3 in the first polynomial then the answer is :%d",solve(&first,3));
+    return 0;
+}
