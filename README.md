@@ -7,9 +7,9 @@ Student of CSE(AIML) --(STILL LEARNING)
 I'm SANDEEP KUMAR DUBEY, a B.Tech CSE student specializing in Artificial Intelligence and Machine Learning at Dronacharya College of Engineering. Passionate about technology and driven by curiosity, I’m eager to explore innovative projects, expand my skill set, and dive into the endless possibilities that AI and ML offer to shape the future!
 
 * 🌍  I'm based in New Delhi ,India
-* 🖥️  See my portfolio at [in progress] [more about me](https://rudramani1.github.io/Portfolio/)
-* ✉️  You can contact me at [rudramaniupadhyay3@gmail.com](mailto:rudramaniupadhyay3@gmail.com)
-* 🚀  I'm currently working on [Portfolio](https://rudramani1.github.io/Portfolio/)
+* 🖥️  See my portfolio at [in progress] [more about me]
+* ✉️  You can contact me at [sandeepdk180@gmail.com](mailto:sandeepdk180@gmail.com)
+* 🚀  I'm currently working on [Portfolio]
 * 🧠  I'm learning Python
 * 🤝  I'm open to collaborating on Projects related to Machine Learning
 
@@ -32,4 +32,4 @@ I'm SANDEEP KUMAR DUBEY, a B.Tech CSE student specializing in Artificial Intelli
 <a href="http://www.github.com/SandeepD077"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Rudramani1&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
 
 
-<a href="https://github.com/Rudramani1" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rudramani1&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
+<a href="https://github.com/SandeepD077" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rudramani1&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
