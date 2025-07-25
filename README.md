@@ -7,7 +7,7 @@ Student of CSE(AIML) --(STILL LEARNING)
 I'm SANDEEP KUMAR DUBEY, a B.Tech CSE student specializing in Artificial Intelligence and Machine Learning at Dronacharya College of Engineering. Passionate about technology and driven by curiosity, I’m eager to explore innovative projects, expand my skill set, and dive into the endless possibilities that AI and ML offer to shape the future!
 
 * 🌍  I'm based in New Delhi ,India
-* 🖥️  See my portfolio at [https://sandeepd077.github.io/portfolio/] [more about me]
+* 🖥️  See my portfolio at [more about me](https://sandeepd077.github.io/portfolio/)
 * ✉️  You can contact me at [sandeepdk180@gmail.com](mailto:sandeepdk180@gmail.com)
 * 🚀  I'm currently working on [Portfolio]
 * 🧠  I'm learning Python
